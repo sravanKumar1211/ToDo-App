@@ -66,7 +66,7 @@ export default function App() {
           ))}
         </div>
 
-        {/* Completed Section */}
+        {/* Completed section */}
         <div className="section completed-section">
           <h2>Completed</h2>
           <button className="clear-btn" onClick={() => clearSection('completed')}>Clear</button>
