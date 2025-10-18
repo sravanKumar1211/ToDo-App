@@ -95,20 +95,20 @@
 }
 
 .delete {
-  background-color: rgb(171, 6, 6);
+  background-color:rgb(157, 5, 5);
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 3px 6px;
+  padding: 5px 7px;
   cursor: pointer;
 }
 
 .pending {
-  background-color: rgb(239, 161, 6);
+  background-color: red;
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 3px 6px;
+  padding: 5px 7px;
   cursor: pointer;
 }
 .pending-section{
@@ -126,11 +126,11 @@
 }
 
 .complete {
-  background-color: rgb(114, 225, 2);
+  background-color: green;
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 3px 6px;
+  padding: 5px 7px;
   cursor: pointer;
 }
 
