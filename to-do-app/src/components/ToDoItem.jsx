@@ -7,6 +7,11 @@ export default function ToDoItem({ data, onDelete, onComplete, onPending, onEdit
 //   state to manage the edited task text
   const [editedTask, setEditedTask] = useState(data);
 
+   function handleEdit() {
+    setEditedTask(data); // reset editedTask to current data before editing
+    setIsEditing(true);
+  }
+
   // Save edited task
   function handleSave() {
     if (editedTask.trim() === '') return;
@@ -38,7 +43,7 @@ export default function ToDoItem({ data, onDelete, onComplete, onPending, onEdit
               <button className="pending" onClick={onPending}>Do Later</button>
               <button className="complete" onClick={onComplete}>Complete</button>
               <button className="delete" onClick={onDelete}>Delete</button>
-              <button className="edit" onClick={() => setIsEditing(true)}>Edit</button>
+              <button className="edit" onClick={handleEdit}>Edit</button>
             </>
           ) : (
             <>
