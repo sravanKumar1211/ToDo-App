@@ -124,6 +124,15 @@
     background-color: rgb(210, 250, 210) ;
     border: 1px solid green ;
 }
+.edit, .save, .cancel {
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 7px;
+  cursor: pointer;
+}
+
 
 .complete {
   background-color: green;
