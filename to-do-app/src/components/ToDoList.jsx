@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ToDoList({ todoData }) {
+export default function ToDoList({ todoData, todos = [] }) {
   const [input, setInput] = useState('');
 
   function handleChange(e) {
@@ -25,6 +25,13 @@ export default function ToDoList({ todoData }) {
       <button className="add-btn" onClick={handleClick}>
         Add Task
       </button>
+
+      {/* ✅ Render To-Do items dynamically */}
+      <div className="preview-list">
+        {todos.map((task, i) => (
+          <p key={`preview-${i}`}>{task}</p>
+        ))}
+      </div>
     </div>
   );
 }
