@@ -29,6 +29,12 @@ export default function App() {
     setPending((prev) => [...prev, task]);
   }
 
+  function editTask(index, newTask) {
+    const updated = [...todos];
+    updated[index] = newTask;
+    setTodos(updated);
+  }
+
   function clearSection(section) {
     if (section === 'pending') setPending([]);
     if (section === 'todos') setTodos([]);
@@ -38,7 +44,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <ToDoList todoData={addTask} />
+      <ToDoList todoData={addTask} todos={todos} />
 
       <div className="containers">
         {/* Pending Section */}
@@ -46,7 +52,7 @@ export default function App() {
           <h2>Pending</h2>
           <button className="clear-btn" onClick={() => clearSection('pending')}>Clear</button>
           {pending.map((task, i) => (
-            <ToDoItem key={i} data={task} type="pending" />
+            <ToDoItem key={`pending-${i}`} data={task} type="pending" />
           ))}
         </div>
 
@@ -56,11 +62,12 @@ export default function App() {
           <button className="clear-btn" onClick={() => clearSection('todos')}>Clear</button>
           {todos.map((task, i) => (
             <ToDoItem
-              key={i}
+              key={`todo-${i}`}
               data={task}
               onDelete={() => deleteTask(i)}
               onComplete={() => markComplete(i)}
               onPending={() => markPending(i)}
+              onEdit={(newTask) => editTask(i, newTask)}
               type="todo"
             />
           ))}
@@ -71,7 +78,7 @@ export default function App() {
           <h2>Completed</h2>
           <button className="clear-btn" onClick={() => clearSection('completed')}>Clear</button>
           {completed.map((task, i) => (
-            <ToDoItem key={i} data={task} type="completed" />
+            <ToDoItem key={`completed-${i}`} data={task} type="completed" />
           ))}
         </div>
       </div>
