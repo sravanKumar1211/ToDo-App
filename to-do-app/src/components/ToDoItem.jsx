@@ -8,9 +8,9 @@ export default function ToDoItem({ data, onDelete, onComplete, onPending, type }
       </div>
       {type === 'todo' && (
         <div className="controls">
-          <button className="pending" onClick={onPending}>Pending</button>
-          <button className="delete" onClick={onDelete}>Delete</button>
+          <button className="pending" onClick={onPending}>Do-Later</button>
           <button className="complete" onClick={onComplete}>Complete</button>
+          <button className="delete" onClick={onDelete}>Delete</button>
         </div>
       )}
     </div>
