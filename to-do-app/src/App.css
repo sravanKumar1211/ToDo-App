@@ -168,14 +168,17 @@
 
 /* Color themes for different sections */
 .pending-section {
+  background-color: rgb(255, 243, 224);
   border-top: 5px solid orange;
 }
 
 .todo-section {
+  background-color: rgb(224, 229, 255);
   border-top: 5px solid #4a4aff;
 }
 
 .completed-section {
+  background-color: rgb(216, 247, 216);
   border-top: 5px solid green;
 }
 
