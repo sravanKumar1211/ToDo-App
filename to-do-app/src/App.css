@@ -1,152 +1,191 @@
+/* Global reset */
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Navbar */
 .navbar {
-  display: flex;
-  background-color: rgb(64, 64, 231);
-  height: 10vh;
-  width: 95vw;
-  margin: 15px auto;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar ul {
-  list-style: none;
+  background-color: #4a4aff;
+  padding: 15px 0;
   color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+.navbar h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* Input section */
 .input-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0 auto 30px;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .inputfield {
-  width: 40%;
-  height: 5vh;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 10px 0 0 10px;
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #4a4aff;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.add-btn, .clear-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .add-btn {
-  width: 120px;
-  height: 5.2vh;
-  border: none;
-  background-color: rgb(64, 64, 231);
-  color: white;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
+  background-color: #4a4aff;
 }
-
-.containers {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 40px auto;
-  width: 95vw;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.section {
-  flex: 1;
-  min-width: 300px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 10px;
+.add-btn:hover {
+  background-color: #3434d6;
 }
 
 .clear-btn {
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
+  background-color: crimson;
+  margin-left: 10px;
+}
+.clear-btn:hover {
+  background-color: darkred;
 }
 
+/* ToDo items list */
+.todo-list {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Each task item */
 .item {
-  padding: 5px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 8px 0;
+  background-color: #fafafa;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+.item:hover {
+  background-color: #f2f2f2;
 }
 
-.controls {
-  display: flex;
-  gap: 5px;
+/* Task text */
+.task p {
+  font-size: 16px;
 }
 
-.delete {
-  background-color:rgb(157, 5, 5);
+/* Control buttons */
+.controls button {
+  margin-left: 5px;
+  padding: 6px 12px;
   border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 5px 7px;
+  border-radius: 6px;
   cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: background 0.2s ease;
 }
 
 .pending {
-  background-color: red;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 5px 7px;
-  cursor: pointer;
-}
-.pending-section{
-    background-color:  rgb(235, 205, 205) ;
-    border: 1px solid  red ;
-}
-
-.todo-section{
-    background-color:  rgb(225, 225, 201) ;
-    border: 1px solid yellow ;
-}
-.completed-section{
-    background-color: rgb(210, 250, 210) ;
-    border: 1px solid green ;
-}
-.edit, .save, .cancel {
   background-color: orange;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 5px 7px;
-  cursor: pointer;
 }
-
+.pending:hover {
+  background-color: darkorange;
+}
 
 .complete {
   background-color: green;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 5px 7px;
-  cursor: pointer;
+}
+.complete:hover {
+  background-color: darkgreen;
 }
 
-/* Responsive */
+.delete {
+  background-color: red;
+}
+.delete:hover {
+  background-color: darkred;
+}
+
+.edit {
+  background-color: teal;
+}
+.edit:hover {
+  background-color: darkslategray;
+}
+
+.save {
+  background-color: blueviolet;
+}
+.cancel {
+  background-color: gray;
+}
+
+/* Sections layout */
+.containers {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+.section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  width: 30%;
+  min-width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* Color themes for different sections */
+.pending-section {
+  border-top: 5px solid orange;
+}
+
+.todo-section {
+  border-top: 5px solid #4a4aff;
+}
+
+.completed-section {
+  border-top: 5px solid green;
+}
+
+/* Responsive design */
 @media (max-width: 900px) {
   .containers {
     flex-direction: column;
     align-items: center;
+  }
+  .section {
+    width: 80%;
   }
 }
