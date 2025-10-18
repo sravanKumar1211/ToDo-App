@@ -111,6 +111,19 @@
   padding: 3px 6px;
   cursor: pointer;
 }
+.pending-section{
+    background-color:  rgb(235, 205, 205) ;
+    border: 1px solid  red ;
+}
+
+.todo-section{
+    background-color:  rgb(225, 225, 201) ;
+    border: 1px solid yellow ;
+}
+.completed-section{
+    background-color: rgb(210, 250, 210) ;
+    border: 1px solid green ;
+}
 
 .complete {
   background-color: rgb(114, 225, 2);
